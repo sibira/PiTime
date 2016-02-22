@@ -124,7 +124,7 @@ http://weather.livedoor.com/area/forecast/200010
 
 ## ライセンス
 
-This software is released under the [MIT Licenses](http://ja.wikipedia.org/wiki/MIT_License)
+This software is released under the [MIT Licenses](https://opensource.org/licenses/mit-license.php)
 
 ## 免責事項
 
