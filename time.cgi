@@ -15,6 +15,8 @@ use Time::Local;
 use CGI qw(:standard);
 use Calendar::Japanese::Holiday;
 #################################################################################
+#ここから変更可能
+#################################################################################
 #パラメータ変更用
 
 #天気:エリア番号
@@ -127,6 +129,25 @@ my $weather_color1 = "FFFFFF";
 my $weather_color2 = "FF3333";
 
 #################################################################################
+
+#dmesg内でエラーと判断するもの
+my @error_word;
+$error_word[$#error_word+1] = 'error';
+$error_word[$#error_word+1] = 'warning';
+$error_word[$#error_word+1] = 'fail';
+$error_word[$#error_word+1] = 'Can\'t/';
+$error_word[$#error_word+1] = 'I\/O';
+#$error_word[$#error_word+1] = 'ADD WORD';	#ADD WORD
+
+#エラーと判断した行で以下文字が入っていた場合除外
+my @exc_word;
+$exc_word[$#exc_word+1] = 'flexfb';
+#$exc_word[$#exc_word+1] = 'flexfb';	#ADD WORD
+
+#################################################################################
+#ここまで変更可能
+#################################################################################
+
 #再起動/停止
 my $post_data = param('system');	#postデータ代入
 my $post_access = param('access');	#postデータ代入
@@ -186,16 +207,18 @@ $para_mem2 =~ s/\n//g;
 my $para_mem3 = sprintf("%d",((($para_mem1-$para_mem2)/$para_mem1)*100));
 my @para_dmesg = `dmesg`;
 my $para_errormsg;
-my @exc_word;
-$exc_word[$#exc_word+1] = 'flexfb';
-foreach my $value1 (@para_dmesg){
-	foreach my $value2 (@exc_word){
-		if ( "$value1" !~ /$value2/ ) {
-			if ( "$value1" =~ /error/ ) { $para_errormsg .= $value1." "; }
-			if ( "$value1" =~ /warning/ ) { $para_errormsg .= $value1." "; }
-			if ( "$value1" =~ /fail/ ) { $para_errormsg .= $value1." "; }
-			if ( "$value1" =~ /Can\'t/ ) { $para_errormsg .= $value1." "; }
-			if ( "$value1" =~ /I\/O/ ) { $para_errormsg .= $value1." "; }
+my $exc_check = 0;
+foreach my $value1 (@para_dmesg) {
+	foreach my $value2 (@error_word) {
+		if ( "$value1" =~ /$value2/ ) {
+			foreach my $value3 (@exc_word) {
+				if ( "$value1" =~ /$value3/ ) {
+					$exc_check = 1;
+				}
+				if ( $exc_check == 0 ) {
+					$para_errormsg .= $value1." ";
+				}
+			}
 		}
 	}
 }
@@ -560,16 +583,22 @@ print "</tr>\n";
 print "<tr style=\"height:".($display_height*0.075)."px;\">\n";
 print "<td>Max/Min</td>\n";
 print "<td style=\"color:#".$weather_color1.";\">\n";
-if ( $weather_data01_tmp_max ) { print "$weather_data01_tmp_max～" } else { print "_～"; }
-if ( $weather_data01_tmp_min ) { print "$weather_data01_tmp_min\n" } else { print "_"; }
+if ( $weather_data01_tmp_max or $weather_data01_tmp_min ) {
+	if ( $weather_data01_tmp_max ) { print "$weather_data01_tmp_max～" } else { print "_～"; }
+	if ( $weather_data01_tmp_min ) { print "$weather_data01_tmp_min\n" } else { print "_"; }
+}
 print "</td>\n";
 print "<td style=\"color:#".$weather_color1.";\">\n";
-if ( $weather_data02_tmp_max ) { print "$weather_data02_tmp_max～" } else { print "_～"; }
-if ( $weather_data02_tmp_min ) { print "$weather_data02_tmp_min\n" } else { print "_"; }
+if ( $weather_data02_tmp_max or $weather_data02_tmp_min ) {
+	if ( $weather_data02_tmp_max ) { print "$weather_data02_tmp_max～" } else { print "_～"; }
+	if ( $weather_data02_tmp_min ) { print "$weather_data02_tmp_min\n" } else { print "_"; }
+}
 print "</td>\n";
 print "<td style=\"color:#".$weather_color1.";\">\n";
-if ( $weather_data03_tmp_max ) { print "$weather_data03_tmp_max～" } else { print "_～"; }
-if ( $weather_data03_tmp_min ) { print "$weather_data03_tmp_min\n" } else { print "_"; }
+if ( $weather_data03_tmp_max or $weather_data03_tmp_min ) {
+	if ( $weather_data03_tmp_max ) { print "$weather_data03_tmp_max～" } else { print "_～"; }
+	if ( $weather_data03_tmp_min ) { print "$weather_data03_tmp_min\n" } else { print "_"; }
+}
 print "</td>\n";
 print "</tr>\n";
 

@@ -14,12 +14,9 @@ OS:raspbian wheezy 7.8
 
 ![pic](http://www.netf.co.jp/wp-content/uploads/2016/01/CA3I0003-300x225.jpg)
 
-
 ## 外部ライブラリ  
 [jquery](https://github.com/jquery/jquery) is MIT License  
 [jquery.knob](https://github.com/aterrien/jQuery-Knob) is MIT License  
-
-
 
 ## インストール方法
 
@@ -120,6 +117,11 @@ http://weather.livedoor.com/
 http://weather.livedoor.com/area/forecast/200010  
 
 設定が終わったら、キーボードのF5を押して画面をリロードしてみてください。  
+
+エラーメッセージがデフォルトで出るようであれば、ソース内の  
+#dmesg内でエラーと判断するもの  
+#エラーと判断した行で以下文字が入っていた場合除外  
+あたりをいじってみてください。  
 
 ## ライセンス
 
