@@ -16,7 +16,7 @@ OS:raspbian wheezy 7.8
 --------------------------------------
 
 * time.cgi  
-  /usr/lib/cgi-bin/に設置、実行権限変更  
+  /usr/lib/cgi-bin/に設置、実行権限変更してください  
   sudo chown pi:pi time.cgi  
   sudo chmod 755 time.cgi  
 
@@ -24,7 +24,7 @@ OS:raspbian wheezy 7.8
 
 * jquery.knob-1.2.12.min.js  
 * jquery-2.1.4.min.js  
-  /var/www/jsに設置、実行権限変更  
+  以下ディレクトリを作り、/var/www/jsに設置してください  
   sudo mkdir /var/www/js  
   sudo chown pi:pi /var/www/js  
   sudo chmod 755 /var/www/js  
@@ -84,6 +84,32 @@ OS:raspbian wheezy 7.8
 * 再起動後、時計の画面になっている筈。  
 
 --------------------------------------
+
+## パラメータ変更  
+
+* ネットワークインターフェース(wlan* or eth*)  
+my $para_wlan0 = “wlan0”;  
+
+* 再生デイバス番号(番号 or none)  
+my $para_int_vol1 = “0”;  
+* 録音デイバス番号(番号 or none)  
+my $para_int_vol2 = “1”;  
+ここの番号は、amixer -c ● の黒丸の番号になります。  
+
+* お天気の地域設定  
+my $weather_area = “130010”;  
+
+地域の番号を入力しないといけません（設定されているのは東京です）  
+http://weather.livedoor.com/weather_hacks/webservice  
+
+番号わからないという方は  
+http://weather.livedoor.com/  
+から各地の天気のページにいったURLのアドレスが各都道府県になっている様子  
+
+例）長野だと以下のURLになるのでパラメーターは200010  
+http://weather.livedoor.com/area/forecast/200010  
+
+設定が終わったら、キーボードのF5を押して画面をリロードしてみてください。  
 
 ## ライセンス
 
