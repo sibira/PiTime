@@ -11,6 +11,12 @@ OS:raspbian wheezy 7.8
 ## 動作画面
 [ブログ](http://www.netf.co.jp/blog/tech/raspberry-pi-%E3%81%A7%E5%8D%93%E4%B8%8A%E6%99%82%E8%A8%88%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%BE%E3%81%97%E3%81%9F/)
 
+## 外部ライブラリ  
+[jquery](https://github.com/jquery/jquery) is MIT License  
+[jquery.knob](https://github.com/aterrien/jQuery-Knob) is MIT License  
+
+
+
 ## インストール方法
 
 --------------------------------------
