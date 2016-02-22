@@ -1,11 +1,10 @@
 #!/usr/bin/perl
 ##############################################################
 #PiTime
-#Version: 1.0 (12/18/2015)
+#Version: 1.1 (22/02/2016)
 #Copyright (c) 2015 Masahito Hayashi
-#This software is released under the MIT and GPL Licenses:
+#This software is released under the MIT Licenses:
 #http://www.opensource.org/licenses/mit-license.php
-#http://www.gnu.org/licenses/gpl.html
 ##############################################################
 #モジュール読み込み
 use strict;
@@ -339,7 +338,7 @@ print "<title>TIME</title>\n";
 
 #Java
 print "<script type=\"text/javascript\" src=\"../js/jquery-2.1.4.min.js\"></script>\n";
-print "<script type=\"text/javascript\" src=\"../js/jquery.knob-1.2.12.min.js\"></script>\n";
+print "<script type=\"text/javascript\" src=\"../js/jquery.knob-1.2.12.js\"></script>\n";
 print "<script>\$(function(){ \$(\".knob\").knob(); });</script>\n";
 
 #スタイルシート開始
