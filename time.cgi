@@ -4,7 +4,7 @@
 #Version: 1.2 (22/02/2016)
 #Copyright (c) 2015 Masahito Hayashi
 #This software is released under the MIT Licenses:
-#http://www.opensource.org/licenses/mit-license.php
+#https://opensource.org/licenses/mit-license.php
 ##############################################################
 #モジュール読み込み
 use strict;
