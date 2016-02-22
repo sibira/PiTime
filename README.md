@@ -1,7 +1,7 @@
 PiTime
 ====
 
-RaspBerry Pi を卓上時計にします。
+RaspBerry Pi 繧貞酷荳頑凾險医↓縺励∪縺吶�
 
 ## Description
 
@@ -9,6 +9,6 @@ RaspBerry Pi を卓上時計にします。
 
 ## Licence
 
-[MIT](http://www.opensource.org/licenses/mit-license.php)
-[GPL](http://www.gnu.org/licenses/gpl.html)
+  [MIT](http://www.opensource.org/licenses/mit-license.php)
+  [GPL](http://www.gnu.org/licenses/gpl.html)
 
