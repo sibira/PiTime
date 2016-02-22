@@ -10,10 +10,10 @@ OS:raspbian wheezy 7.8
 
 ## Install
 
-*time.cgi
+* time.cgi
 /usr/lib/cgi-bin/に設置、実行権限変更
-`sudo chown pi:pi time.cgi
-`sudo chmod 755 time.cgi
+` sudo chown pi:pi time.cgi `
+` sudo chmod 755 time.cgi `
 
 
 *jquery.knob-1.2.12.min.js
