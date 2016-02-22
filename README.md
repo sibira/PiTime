@@ -15,8 +15,8 @@ OS:raspbian wheezy 7.8
 ![pic](http://www.netf.co.jp/wp-content/uploads/2016/01/CA3I0003-300x225.jpg)
 
 ## 外部ライブラリ  
-[jquery](https://github.com/jquery/jquery) is MIT License  
-[jquery.knob](https://github.com/aterrien/jQuery-Knob) is MIT License  
+[jquery](https://github.com/jquery/jquery) (jquery-2.1.4.min.js)
+[jquery.knob](https://github.com/aterrien/jQuery-Knob) (jquery.knob-1.2.12.js) 
 
 ## インストール方法
 
