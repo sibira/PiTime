@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 ##############################################################
 #PiTime
-#Version: 1.2 (22/02/2016)
+#Version: 1.1 (22/02/2016)
 #Copyright (c) 2015 Masahito Hayashi
 #This software is released under the MIT Licenses:
 #https://opensource.org/licenses/mit-license.php
@@ -137,12 +137,12 @@ $error_word[$#error_word+1] = 'warning';
 $error_word[$#error_word+1] = 'fail';
 $error_word[$#error_word+1] = 'Can\'t/';
 $error_word[$#error_word+1] = 'I\/O';
-#$error_word[$#error_word+1] = 'ADD WORD';	#ADD WORD
+#$error_word[$#error_word+1] = '●●●';	#add word
 
 #エラーと判断した行で以下文字が入っていた場合除外
 my @exc_word;
 $exc_word[$#exc_word+1] = 'flexfb';
-#$exc_word[$#exc_word+1] = 'flexfb';	#ADD WORD
+#$exc_word[$#exc_word+1] = '●●●';	#add word
 
 #################################################################################
 #ここまで変更可能
