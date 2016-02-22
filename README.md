@@ -87,8 +87,7 @@ OS:raspbian wheezy 7.8
 
 ## ライセンス
 
-MIT ライセンス
-    http://ja.wikipedia.org/wiki/MIT_License
+[MIT ライセンス](http://ja.wikipedia.org/wiki/MIT_License)
 
 ## 免責事項
 
