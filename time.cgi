@@ -513,7 +513,7 @@ print "<div class=\"time_weather\">\n";
 print "<table class=\"tablestyle\">\n";
 #天気:日付
 print "<tr style=\"height:".($display_height*0.075)."px;\">\n";
-print "<td style=\"width:".($display_width*0.175)."px;\">City</td>\n";
+print "<td style=\"width:".($display_width*0.175)."px;\">DATE</td>\n";
 print "<td style=\"width:".($display_width*0.175)."px;\">";
 if ( $weather_data01_day ) { print $weather_data01_day; } else { print "___"; }
 print "</td>\n";
