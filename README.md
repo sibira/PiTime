@@ -39,15 +39,6 @@ OS:raspbian wheezy 7.8
 
 --------------------------------------
 
-* raspbian アップデート  
-  sudo apt-get update  
-  sudo apt-get upgrade  
-  sudo apt-get dist-upgrade  
-  再起動  
-  sudo apt-get autoremove  
-
---------------------------------------
-
 * perlのモジュールインストール  
   sudo cpan    （yes/noを聞かれたら、とりあえずエンター)  
   install JSON  
@@ -56,7 +47,8 @@ OS:raspbian wheezy 7.8
 
 --------------------------------------
 
-* その他必要なパッケージインストール  
+* 必要なパッケージインストール  
+  sudo apt-get update  
   sudo apt-get install apache2  
   sudo apt-get install unclutter  
   sudo apt-get install midori  
