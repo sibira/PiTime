@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 ##############################################################
 #PiTime
-#Version: 1.1 (25/02/2016)
+#Version: 1.1 (26/02/2016)
 #Copyright (c) 2015 Masahito Hayashi
 #This software is released under the MIT Licenses:
 #https://opensource.org/licenses/mit-license.php
